@@ -1,0 +1,87 @@
+﻿<Window x:Class="vladnigger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:vladnigger"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="800" Style="{StaticResource fadeWin}">
+    <Grid>
+        <Border CornerRadius="40" Background="#242424" MouseDown="Border_MouseDown">
+            <TabControl Background="Transparent" x:Name="MyTab" BorderThickness="0">
+                <TabItem Visibility="Hidden" IsSelected="True">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.RowSpan="3" Margin="0 30 0 0">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Margin="0 1 0 0">
+                                <StackPanel VerticalAlignment="Center" Margin="20 0 0 0">
+                                    <TextBlock TextWrapping="Wrap" x:Name="LessonStatus1" Style="{StaticResource bText}" HorizontalAlignment="Center" Margin="0 0 0 5" />
+                                    <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="Lesson1" Click="JoinLesson"/>
+                                </StackPanel>
+
+                                <StackPanel VerticalAlignment="Center" Margin="20 0 0 0">
+                                    <TextBlock TextWrapping="Wrap" x:Name="LessonStatus2" Style="{StaticResource bText}" HorizontalAlignment="Center" Margin="0 0 0 5"/>
+                                    <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="Lesson2" Click="JoinLesson"/>
+                                </StackPanel>
+
+                                <StackPanel VerticalAlignment="Center" Margin="20 0 0 0">
+                                    <TextBlock TextWrapping="Wrap" x:Name="LessonStatus3" Style="{StaticResource bText}" HorizontalAlignment="Center" Margin="0 0 0 5"/>
+                                    <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="Lesson3" Click="JoinLesson"/>
+                                </StackPanel>
+
+                                <StackPanel VerticalAlignment="Center" Margin="20 0 20 0">
+                                    <TextBlock TextWrapping="Wrap" x:Name="LessonStatus4" Style="{StaticResource bText}" HorizontalAlignment="Center" Margin="0 0 0 5"/>
+                                    <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="Lesson4" Click="JoinLesson"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Margin="0 15 0 0" Grid.RowSpan="2">
+                                <StackPanel VerticalAlignment="Center" Margin="20 0 0 0">
+                                    <TextBlock TextWrapping="Wrap" x:Name="LessonStatus5" Style="{StaticResource bText}" HorizontalAlignment="Center" Margin="0 0 0 5"/>
+                                    <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="Lesson5" Click="JoinLesson"/>
+                                </StackPanel>
+
+                                <StackPanel VerticalAlignment="Center" Margin="20 0 0 0">
+                                    <TextBlock TextWrapping="Wrap" x:Name="LessonStatus6" Style="{StaticResource bText}" HorizontalAlignment="Center" Margin="0 0 0 5"/>
+                                    <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="Lesson6" Click="JoinLesson"/>
+                                </StackPanel>
+
+                                <StackPanel VerticalAlignment="Center" Margin="20 0 0 0">
+                                    <TextBlock TextWrapping="Wrap" x:Name="LessonStatus7" Style="{StaticResource bText}" HorizontalAlignment="Center" Margin="0 0 0 5"/>
+                                    <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="Lesson7" Click="JoinLesson"/>
+                                </StackPanel>
+
+                                <StackPanel VerticalAlignment="Center" Margin="20 0 20 0">
+                                    <TextBlock TextWrapping="Wrap" x:Name="LessonStatus8" Style="{StaticResource bText}" HorizontalAlignment="Center" Margin="0 0 0 5"/>
+                                    <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="Lesson8" Click="JoinLesson" />
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel VerticalAlignment="Center" Grid.Row="5" Margin="20 0 0 0" HorizontalAlignment="Stretch">
+                            <Button Width="140" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="CheckTime" Click="CheckTime_Click" HorizontalAlignment="Right" Margin="0 0 15 0" Content="Расписание"/>
+                        </StackPanel>
+
+                        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="20 0 0 -354">
+                            <TextBlock TextWrapping="Wrap" Name="LessonAuto" Style="{StaticResource bText}" HorizontalAlignment="Stretch" Margin="0 0 0 5"/>
+                            <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" Name="LessonAuto1" Click="Autojoin" Content="Авто-Підключення"/>
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Border>
+    </Grid>
+</Window>
