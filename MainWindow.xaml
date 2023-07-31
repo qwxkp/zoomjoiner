@@ -79,7 +79,7 @@
                             <TextBlock TextWrapping="Wrap" Name="LessonAuto" Style="{StaticResource bText}" HorizontalAlignment="Stretch" Margin="0 0 0 5"/>
                             <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" Name="LessonAuto1" Click="Autojoin" Content="Авто-Підключення"/>
                         </StackPanel>
-                    </Grid>
+                    </Grid> 
                 </TabItem>
             </TabControl>
         </Border>
