@@ -273,5 +273,26 @@ namespace vladnigger
         {
             return (Brush)new System.Windows.Media.BrushConverter().ConvertFromString(color);
         }
+
+        private void LessonManual(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Hide();
+            string messageBoxText = "Привіт, для того щоб автоприєднатися до навчань треба натиснути кнопку під час початку урока. (наприклад 8:00)";
+            string caption = "Інструкція";
+            MessageBoxButton button = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.Information;
+            MessageBoxResult result;
+
+            result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.OK);
+            Task.Delay(5000);
+            App.Current.MainWindow.Show();
+        }
+
+        private void LessonAutoJoin(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }

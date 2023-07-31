@@ -76,8 +76,13 @@
                         </StackPanel>
 
                         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="20 0 0 -354">
-                            <TextBlock TextWrapping="Wrap" Name="LessonAuto" Style="{StaticResource bText}" HorizontalAlignment="Stretch" Margin="0 0 0 5"/>
-                            <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" Name="LessonAuto1" Click="Autojoin" Content="Авто-Підключення"/>
+                            <TextBlock TextWrapping="Wrap" Name="LessonManuall" Style="{StaticResource bText}" HorizontalAlignment="Stretch" Margin="0 0 0 5"/>
+                            <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" Name="LessonManual1" Click="LessonManual" Content="Інструкція"/>
+                        </StackPanel>
+
+                        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20 0 0 -354">
+                            <TextBlock TextWrapping="Wrap" Name="LessonAuto" Style="{StaticResource bText}" VerticalAlignment ="Center" HorizontalAlignment="Stretch" Margin="0 0 0 5"/>
+                            <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" Name="LessonAuto2" Click="LessonAutoJoin" Content="Авто-Підключення"/>
                         </StackPanel>
                     </Grid> 
                 </TabItem>
