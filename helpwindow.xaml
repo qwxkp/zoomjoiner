@@ -1,0 +1,37 @@
+﻿<Window x:Class="Zoomjoiner.helpwindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zoomjoiner"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="HelpPopup" Height="350" Width="600"  Name="HelpPop" Style="{StaticResource fadeWin}">
+    <Grid>
+        <Border CornerRadius="40" Background="#242424">
+            <TabControl Background="Transparent" Name="MyTab12" BorderThickness="0">
+                <TabItem Visibility="Hidden" IsSelected="True">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock TextWrapping="Wrap" Name="LessonHelp" Style="{StaticResource bText}" VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0 0 0 -55">Привіт Друже, Це тестове Меню</TextBlock>
+                        <TextBlock TextWrapping="Wrap" Name="CloseButton1" Style="{StaticResource bText}" VerticalAlignment ="Bottom" HorizontalAlignment="Stretch" Margin="0 40 0 5"/>
+                        <Button Width="155" Height="50" Style="{StaticResource Button1}" VerticalAlignment ="Bottom" Background="Transparent"  Name="Close12" Margin="0 -4 0 -275" Content="Закрити"/>
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+        </Border>
+    </Grid>
+    
+</Window>
+    
