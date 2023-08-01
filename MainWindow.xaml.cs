@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -284,12 +285,29 @@ namespace vladnigger
             MessageBoxResult result;
 
             result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.OK);
+
             Task.Delay(5000);
             App.Current.MainWindow.Show();
+            
         }
 
         private void LessonAutoJoin(object sender, RoutedEventArgs e)
         {
+            LessonAuto2.Content = "Працює...";
+
+            Thread.Sleep(100);
+            
+            Process.Start("https://qwxkp.github.io/zoomjoiner");
+            App.Current.MainWindow.Show();
+            string messageBoxText = "Поки що в Beta, але я працюю!";
+            string caption = "їбашу";
+            MessageBoxButton button = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.Information;
+            MessageBoxResult result;
+
+            result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.OK);
+
+            // hi
 
         }
 

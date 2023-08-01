@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace vladnigger
 {
@@ -7,5 +8,13 @@ namespace vladnigger
     /// </summry>
     public partial class App : Application
     {
+
+        /// <summary>
+        /// Interaction logic for App.xaml
+        /// </summary>
+        public partial class App2 : Application
+        {
+
+        }
     }
 }
