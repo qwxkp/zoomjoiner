@@ -25,7 +25,7 @@
                         </Grid.RowDefinitions>
                         <TextBlock TextWrapping="Wrap" Name="LessonHelp" Style="{StaticResource bText}" VerticalAlignment ="Center" HorizontalAlignment="Center" Margin="0 0 0 -55">Привіт Друже, Це тестове Меню</TextBlock>
                         <TextBlock TextWrapping="Wrap" Name="CloseButton1" Style="{StaticResource bText}" VerticalAlignment ="Bottom" HorizontalAlignment="Stretch" Margin="0 40 0 5"/>
-                        <Button Width="155" Height="50" Style="{StaticResource Button1}" VerticalAlignment ="Bottom" Background="Transparent"  Name="Close12" Margin="0 -4 0 -275" Content="Закрити"/>
+                        <Button Width="155" Height="50" Style="{StaticResource Button1}" VerticalAlignment ="Bottom" Background="Transparent"  Name="Close12" Click="Close12_Click_1"  Margin="0 -4 0 -275" Content="Закрити"/>
                     </Grid>
                 </TabItem>
 

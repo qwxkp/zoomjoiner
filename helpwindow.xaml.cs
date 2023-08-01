@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using vladnigger;
 
 namespace Zoomjoiner
 {
@@ -22,6 +23,22 @@ namespace Zoomjoiner
         public helpwindow()
         {
             InitializeComponent();
+
+            void Close12_Click(object sender, RoutedEventArgs e)
+            {
+                
+            }
+
+
+        }
+        void Close12_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
+
+
+
+
+
