@@ -51,7 +51,7 @@ namespace vladnigger
                     isAnim[btn] = false;
                     currentLesson[btn.Name] = lessonDays[index][day];
                     _ = ButtonTextAnim(btn, lessonDays[index][day], 20, wind: this, winOpacityLimit: 0.8);
-                    if (lessonDays[index][day] == "Нету")
+                    if (lessonDays[index][day] == "Нема")
                     {
                         btn.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#8E8E8E"));
                         btn.IsEnabled = false;

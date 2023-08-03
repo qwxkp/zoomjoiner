@@ -10,74 +10,74 @@ namespace vladnigger.Resources.Extended
     {
         public static Dictionary<DayOfWeek, string> Lesson1 = new Dictionary<DayOfWeek, string>()
             {
-                { DayOfWeek.Monday, "Захист Украины" },
-                { DayOfWeek.Tuesday, "Зарубежная Литература" },
-                { DayOfWeek.Wednesday, "Зарубежная Литература" },
-                { DayOfWeek.Thursday, "Право" },
+                { DayOfWeek.Monday, "Захист України" },
+                { DayOfWeek.Tuesday, "Зар. Література" },
+                { DayOfWeek.Wednesday, "Зар. Література" },
+                { DayOfWeek.Thursday, "Правознавство" },
                 { DayOfWeek.Friday, "Укр. Мова" }
             };
 
         public static Dictionary<DayOfWeek, string> Lesson2 = new Dictionary<DayOfWeek, string>()
             {
                 { DayOfWeek.Monday, "Алгебра" },
-                { DayOfWeek.Tuesday, "Геометрия" },
+                { DayOfWeek.Tuesday, "Геометрія" },
                 { DayOfWeek.Wednesday, "Алгебра" },
                 { DayOfWeek.Thursday, "Алгебра" },
-                { DayOfWeek.Friday, "Физ-ра" }
+                { DayOfWeek.Friday, "Фіз-ра" }
             };
 
         public static Dictionary<DayOfWeek, string> Lesson3 = new Dictionary<DayOfWeek, string>()
             {
                 { DayOfWeek.Monday, "Алгебра" },
-                { DayOfWeek.Tuesday, "Английский" },
-                { DayOfWeek.Wednesday, "История" },
+                { DayOfWeek.Tuesday, "Англійська" },
+                { DayOfWeek.Wednesday, "Історія" },
                 { DayOfWeek.Thursday, "Алгебра" },
-                { DayOfWeek.Friday, "Укр. Литература" }
+                { DayOfWeek.Friday, "Укр. Література" }
             };
 
         public static Dictionary<DayOfWeek, string> Lesson4 = new Dictionary<DayOfWeek, string>()
             {
-                { DayOfWeek.Monday, "Физ-ра" },
-                { DayOfWeek.Tuesday, "Физ-ра" },
-                { DayOfWeek.Wednesday, "Английский" },
-                { DayOfWeek.Thursday, "Укр. Литература" },
-                { DayOfWeek.Friday, "География" }
+                { DayOfWeek.Monday, "Фіз-ра" },
+                { DayOfWeek.Tuesday, "Фіз-ра" },
+                { DayOfWeek.Wednesday, "Англійська" },
+                { DayOfWeek.Thursday, "Укр. Література" },
+                { DayOfWeek.Friday, "Географія" }
             };
 
         public static Dictionary<DayOfWeek, string> Lesson5 = new Dictionary<DayOfWeek, string>()
             {
                 { DayOfWeek.Monday, "Мистецтво" },
-                { DayOfWeek.Tuesday, "История" },
-                { DayOfWeek.Wednesday, "География" },
-                { DayOfWeek.Thursday, "Захист Украины" },
-                { DayOfWeek.Friday, "Английский" }
+                { DayOfWeek.Tuesday, "Історія" },
+                { DayOfWeek.Wednesday, "Географія" },
+                { DayOfWeek.Thursday, "Захист України" },
+                { DayOfWeek.Friday, "Англійська" }
             };
 
         public static Dictionary<DayOfWeek, string> Lesson6 = new Dictionary<DayOfWeek, string>()
             {
-                { DayOfWeek.Monday, "Право" },
+                { DayOfWeek.Monday, "Правознавство" },
                 { DayOfWeek.Tuesday, "Укр. Мова" },
                 { DayOfWeek.Wednesday, "Геометрия" },
-                { DayOfWeek.Thursday, "Физика" },
+                { DayOfWeek.Thursday, "Фізика" },
                 { DayOfWeek.Friday, "Биология" }
             };
 
         public static Dictionary<DayOfWeek, string> Lesson7 = new Dictionary<DayOfWeek, string>()
             {
                 { DayOfWeek.Monday, "Физика" },
-                { DayOfWeek.Tuesday, "Биология" },
-                { DayOfWeek.Wednesday, "Физика" },
-                { DayOfWeek.Thursday, "Химия" },
-                { DayOfWeek.Friday, "Геометрия" }
+                { DayOfWeek.Tuesday, "Біологія" },
+                { DayOfWeek.Wednesday, "Фізика" },
+                { DayOfWeek.Thursday, "Хімія" },
+                { DayOfWeek.Friday, "Геометрія" }
             };
 
         public static Dictionary<DayOfWeek, string> Lesson8 = new Dictionary<DayOfWeek, string>()
             {
                 { DayOfWeek.Monday, "Информатика" },
-                { DayOfWeek.Tuesday, "Нету" },
-                { DayOfWeek.Wednesday, "Нету" },
-                { DayOfWeek.Thursday, "Нету" },
-                { DayOfWeek.Friday, "Нету" }
+                { DayOfWeek.Tuesday, "Нема" },
+                { DayOfWeek.Wednesday, "Нема" },
+                { DayOfWeek.Thursday, "Нема" },
+                { DayOfWeek.Friday, "Нема" }
             };
 
         public static TimeSpan[] LessonTime = { TimeSpan.FromMinutes(510), TimeSpan.FromMinutes(565), TimeSpan.FromMinutes(620), TimeSpan.FromMinutes(675), TimeSpan.FromMinutes(730), TimeSpan.FromMinutes(785), TimeSpan.FromMinutes(840), TimeSpan.FromMinutes(895) };
