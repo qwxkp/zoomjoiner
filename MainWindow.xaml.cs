@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,6 +21,7 @@ namespace vladnigger
         private Dictionary<string, string> currentLesson = new Dictionary<string, string>();
         private Dictionary<Button, bool> isAnim = new Dictionary<Button, bool>();
         private bool TimeAnim = false;
+        private bool TimeAnim1 = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -67,7 +70,7 @@ namespace vladnigger
                     btn.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#8E8E8E"));
                     btn.IsEnabled = false;
                     btn.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#8E8E8E"));
-                    _ = ButtonTextAnim(btn, "Нету", 20, wind: this, winOpacityLimit: 0.8);
+                    _ = ButtonTextAnim(btn, "Нема", 20, wind: this, winOpacityLimit: 0.8);
                 }
             }
         }
@@ -82,25 +85,25 @@ namespace vladnigger
             {
                 foreach (var status in lessonStatus)
                 {
-                    if (lessonDays[index][day] == "Нету")
+                    if (lessonDays[index][day] == "Нема")
                         status.Text = "";
                     else if ((Days.LessonTime[index] - currentTime).TotalMilliseconds > 0)
                     {
                         lessonLate[lessonButtons[index].Name] = false;
                         status.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#81E474"));
-                        _ = TextBlockTextAnim(status, "Через " + Math.Round((Days.LessonTime[index] - currentTime).TotalMinutes).ToString() + " мин.", 20, wind: this, winOpacityLimit: 0.8);
+                        _ = TextBlockTextAnim(status, "Через " + Math.Round((Days.LessonTime[index] - currentTime).TotalMinutes).ToString() + " хв.", 20, wind: this, winOpacityLimit: 0.8);
                     }
                     else if ((currentTime - Days.LessonTime[index]).TotalMinutes <= 45) // lesson is going
                     {
                         lessonLate[lessonButtons[index].Name] = false;
                         status.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF7538"));
-                        _ = TextBlockTextAnim(status, "Идет уже " + Math.Round((currentTime - Days.LessonTime[index]).TotalMinutes).ToString() + " мин.", 20, wind: this, winOpacityLimit: 0.8);
+                        _ = TextBlockTextAnim(status, "Йде вже " + Math.Round((currentTime - Days.LessonTime[index]).TotalMinutes).ToString() + " хв.", 20, wind: this, winOpacityLimit: 0.8);
                     }
                     else if ((currentTime - Days.LessonTime[index]).TotalMilliseconds >= 0) // negative
                     {
                         lessonLate[lessonButtons[index].Name] = true;
                         status.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F33E3E"));
-                        _ = TextBlockTextAnim(status, Math.Round((currentTime - Days.LessonTime[index]).TotalMinutes).ToString() + $" мин. назад ({Math.Round((currentTime - Days.LessonTime[index]).TotalHours, 1)} ч.)", 20, wind: this, winOpacityLimit: 0.8);
+                        _ = TextBlockTextAnim(status, Math.Round((currentTime - Days.LessonTime[index]).TotalMinutes).ToString() + $" хв. тому ({Math.Round((currentTime - Days.LessonTime[index]).TotalHours, 1)} год.)", 20, wind: this, winOpacityLimit: 0.8);
                     }
                     index++;
                 }
@@ -171,7 +174,7 @@ namespace vladnigger
 
             foreach (Button button in lessonButtons)
             {
-                button.IsEnabled = oldText[index] == "Нету" ? false : true;
+                button.IsEnabled = oldText[index] == "Нема" ? false : true;
                 _ = ButtonTextAnim(button, oldText[index], 20);
 
                 index++;
@@ -190,9 +193,20 @@ namespace vladnigger
                 CheckTime.Content = (5 - i).ToString();
                 await Task.Delay(1000);
             }
-            await ButtonTextAnim(CheckTime, "Расписание", 20);
+            await ButtonTextAnim(CheckTime, "Розклад", 20);
         }
 
+        private async void StartCountDownAuto()
+        {
+            await ButtonTextAnim(LessonAuto2, "5", 20);
+            for (int i = 0; i < 5; i++)
+            {
+                LessonAuto2.Content = (5 - i).ToString();
+                await Task.Delay(1000);
+               
+            }
+             await ButtonTextAnim(LessonAuto2, "Працює..", 20);
+        }
 
 
 
@@ -283,11 +297,15 @@ namespace vladnigger
 
         }
 
-        private void LessonAutoJoin(object sender, RoutedEventArgs e)
+        async void LessonAutoJoin(object sender, RoutedEventArgs e)
         {
+            
+            StartCountDownAuto();
+            await Task.Delay(6000);
             App.Current.MainWindow.Hide();
-            Process.Start("https://qwxkp.github.io/zoomjoiner");
+            await Task.Delay(2000);
             App.Current.MainWindow.Show();
+
         }
 
 

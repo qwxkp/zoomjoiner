@@ -11,6 +11,8 @@
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800" Style="{StaticResource fadeWin}">
+    
+    
     <Grid>
         <Border CornerRadius="40" Background="#242424" MouseDown="Border_MouseDown">
             <TabControl Background="Transparent" x:Name="MyTab" BorderThickness="0">
