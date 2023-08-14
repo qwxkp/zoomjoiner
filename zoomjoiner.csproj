@@ -59,8 +59,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="helpwindow.xaml.cs">
+      <DependentUpon>helpwindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Extended\Days.cs" />
     <Compile Include="Resources\Extended\Links.cs" />
+    <Page Include="helpwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

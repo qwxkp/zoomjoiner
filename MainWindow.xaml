@@ -11,6 +11,8 @@
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800" Style="{StaticResource fadeWin}">
+    
+    
     <Grid>
         <Border CornerRadius="40" Background="#242424" MouseDown="Border_MouseDown">
             <TabControl Background="Transparent" x:Name="MyTab" BorderThickness="0">
@@ -72,9 +74,19 @@
                         </StackPanel>
 
                         <StackPanel VerticalAlignment="Center" Grid.Row="5" Margin="20 0 0 0" HorizontalAlignment="Stretch">
-                            <Button Width="140" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="CheckTime" Click="CheckTime_Click" HorizontalAlignment="Right" Margin="0 0 15 0" Content="Расписание"/>
+                            <Button Width="140" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="CheckTime" Click="CheckTime_Click" HorizontalAlignment="Right" Margin="0 0 15 0" Content="Розклад"/>
                         </StackPanel>
-                    </Grid>
+
+                        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="20 0 0 -354">
+                            <TextBlock TextWrapping="Wrap" Name="LessonManuall" Style="{StaticResource bText}" HorizontalAlignment="Stretch" Margin="0 0 0 5"/>
+                            <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" Name="LessonManual1" Click="LessonManual" Content="Інструкція"/>
+                        </StackPanel>
+
+                        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20 0 0 -354">
+                            <TextBlock TextWrapping="Wrap" Name="LessonAuto" Style="{StaticResource bText}" VerticalAlignment ="Center" HorizontalAlignment="Stretch" Margin="0 0 0 5"/>
+                            <Button Width="155" Height="50" Style="{StaticResource Button1}" Background="Transparent" Name="LessonAuto2" Click="LessonAutoJoin" Content="Авто-Підключення"/>
+                        </StackPanel>
+                    </Grid> 
                 </TabItem>
             </TabControl>
         </Border>
