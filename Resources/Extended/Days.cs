@@ -64,7 +64,7 @@ namespace vladnigger.Resources.Extended
 
         public static Dictionary<DayOfWeek, string> Lesson7 = new Dictionary<DayOfWeek, string>()
             {
-                { DayOfWeek.Monday, "Физика" },
+                { DayOfWeek.Monday, "Фізика" },
                 { DayOfWeek.Tuesday, "Біологія" },
                 { DayOfWeek.Wednesday, "Фізика" },
                 { DayOfWeek.Thursday, "Хімія" },

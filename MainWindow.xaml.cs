@@ -301,7 +301,7 @@ namespace vladnigger
             StartCountDownAuto();
             await Task.Delay(6000);
             App.Current.MainWindow.Hide();
-            Process.Start("https://qwxkp.github.io/ZoomJoiner/ua");
+            Process.Start("https://notjessie.github.io/ZoomJoiner/ua");
             await Task.Delay(2000);
             App.Current.MainWindow.Show();
 
