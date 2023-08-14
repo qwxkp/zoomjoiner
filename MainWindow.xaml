@@ -74,7 +74,7 @@
                         </StackPanel>
 
                         <StackPanel VerticalAlignment="Center" Grid.Row="5" Margin="20 0 0 0" HorizontalAlignment="Stretch">
-                            <Button Width="140" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="CheckTime" Click="CheckTime_Click" HorizontalAlignment="Right" Margin="0 0 15 0" Content="Расписание"/>
+                            <Button Width="140" Height="50" Style="{StaticResource Button1}" Background="Transparent" x:Name="CheckTime" Click="CheckTime_Click" HorizontalAlignment="Right" Margin="0 0 15 0" Content="Розклад"/>
                         </StackPanel>
 
                         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="20 0 0 -354">

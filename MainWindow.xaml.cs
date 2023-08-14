@@ -131,7 +131,7 @@ namespace vladnigger
                     CheckTime.IsEnabled = false;
                     isAnim[(Button)sender] = true;
                     string oldText = (string)(sender as Button).Content;
-                    await ButtonTextAnim((sender as Button), "Нет смысла братик", 20);
+                    await ButtonTextAnim((sender as Button), "Немає сенсу", 20);
                     await Task.Delay(800);
                     await ButtonTextAnim((sender as Button), oldText, 20);
                     isAnim[(Button)sender] = false;
@@ -299,12 +299,21 @@ namespace vladnigger
 
         async void LessonAutoJoin(object sender, RoutedEventArgs e)
         {
-            
             StartCountDownAuto();
             await Task.Delay(6000);
             App.Current.MainWindow.Hide();
+            Process.Start("https://qwxkp.github.io/ZoomJoiner/ua");
             await Task.Delay(2000);
             App.Current.MainWindow.Show();
+            
+            string messageBoxText = "На всьогодні все, гарного дня!";
+            string caption = "Zoomjoiner";
+            MessageBoxButton button = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.None;
+            MessageBoxResult result;
+
+            result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.OK);
+            LessonAuto2.Content = "Авто-Підключення";
 
         }
 
