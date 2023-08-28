@@ -10,7 +10,7 @@
         WindowStartupLocation="CenterScreen"
         Title="HelpPopup" Height="350" Width="600"  Name="HelpPop" Style="{StaticResource fadeWin}">
     <Grid>
-        <Border CornerRadius="40" Background="#242424">
+        <Border CornerRadius="40" Background="#242424" MouseDown="Border_MouseDown12">
             <TabControl Background="Transparent" Name="MyTab12" BorderThickness="0">
                 <TabItem Visibility="Hidden" IsSelected="True">
                     <Grid>

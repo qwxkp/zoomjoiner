@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using vladnigger.Resources.Extended;
 
-namespace vladnigger
+namespace zoomjoiner
 {
     public partial class MainWindow : Window
     {
@@ -378,7 +378,7 @@ namespace vladnigger
         {
             StartCountDownAuto();
             await Task.Delay(6000);
-            App.Current.MainWindow.Hide();
+            Hide();
             if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
             {
                 if (DateTime.Now.Hour == 8 & DateTime.Now.Minute >= 25 & DateTime.Now.Minute <= 45)
@@ -484,6 +484,14 @@ namespace vladnigger
                 }
                 else
                 {
+                    string messageBoxText = "Помилка, зпробуйте пізніше!";
+                    string caption = "Помилка";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.None;
+                    MessageBoxResult result;
+
+                    result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.OK);
+                    LessonAuto2.Content = "Авто-Підключення";
                     Process.Start("https://www.google.com/search?client=firefox-b-d&q=how+to+make+window+movable+in+wpf+c%23");
                 }
 
@@ -591,6 +599,14 @@ namespace vladnigger
                 }
                 else
                 {
+                    string messageBoxText = "Помилка, зпробуйте пізніше!";
+                    string caption = "Помилка";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.None;
+                    MessageBoxResult result;
+
+                    result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.OK);
+                    LessonAuto2.Content = "Авто-Підключення";
                     Process.Start("https://www.google.com/search?client=firefox-b-d&q=how+to+make+window+movable+in+wpf+c%23");
                 }
 
@@ -699,6 +715,14 @@ namespace vladnigger
                 }
                 else
                 {
+                    string messageBoxText = "Помилка, зпробуйте пізніше!";
+                    string caption = "Помилка";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.None;
+                    MessageBoxResult result;
+
+                    result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.OK);
+                    LessonAuto2.Content = "Авто-Підключення";
                     Process.Start("https://www.google.com/search?client=firefox-b-d&q=how+to+make+window+movable+in+wpf+c%23");
                 }
 
@@ -807,6 +831,14 @@ namespace vladnigger
                 }
                 else
                 {
+                    string messageBoxText = "Помилка, зпробуйте пізніше!";
+                    string caption = "Помилка";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.None;
+                    MessageBoxResult result;
+
+                    result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.OK);
+                    LessonAuto2.Content = "Авто-Підключення";
                     Process.Start("https://www.google.com/search?client=firefox-b-d&q=how+to+make+window+movable+in+wpf+c%23");
                 }
 
@@ -914,6 +946,14 @@ namespace vladnigger
                 }
                 else
                 {
+                    string messageBoxText = "Помилка, зпробуйте пізніше!";
+                    string caption = "Помилка";
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.None;
+                    MessageBoxResult result;
+
+                    result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.OK);
+                    LessonAuto2.Content = "Авто-Підключення";
                     Process.Start("https://www.google.com/search?client=firefox-b-d&q=how+to+make+window+movable+in+wpf+c%23");
                 }
 
@@ -927,16 +967,9 @@ namespace vladnigger
                 Process.Start("https://www.google.com/search?client=firefox-b-d&q=how+to+make+window+movable+in+wpf+c%23");
             }
             
-                App.Current.MainWindow.Show();
+                Show();
 
-                string messageBoxText = "На всьогодні все, гарного дня!";
-                string caption = "Zoomjoiner";
-                MessageBoxButton button = MessageBoxButton.OK;
-                MessageBoxImage icon = MessageBoxImage.None;
-                MessageBoxResult result;
 
-                result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.OK);
-                LessonAuto2.Content = "Авто-Підключення";
 
             }
             
