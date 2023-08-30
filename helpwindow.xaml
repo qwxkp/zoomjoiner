@@ -11,7 +11,7 @@
         WindowStartupLocation="CenterScreen"
         Title="HelpPopup" Height="350" Width="600"  Name="HelpPop" Style="{StaticResource fadeWin}">
     <Grid>
-        <Border CornerRadius="40" Background="#242424">
+        <Border CornerRadius="40" Background="#242424" MouseDown="Border_MouseDown12">
             <TabControl Background="Transparent" Name="MyTab12" BorderThickness="0">
                 <TabItem Visibility="Hidden" IsSelected="True">
                     <Grid>
@@ -23,21 +23,28 @@
                             <RowDefinition />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <TextBlock TextWrapping="Wrap" Name="LessonHelp" Style="{StaticResource bText}" VerticalAlignment ="Center" HorizontalAlignment="Center" TextAlignment="Center"  Margin="0 05 0 -55">Привіт, Друже.<LineBreak/>
+                        <TextBlock TextWrapping="WrapWithOverflow" Name="LessonHelp" Style="{StaticResource bText}" VerticalAlignment ="Center" HorizontalAlignment="Center" TextAlignment="Center"  Margin="0 05 0 -55">Привіт, Друже.<LineBreak/>
 Для того щоб увімкнути автопідключення
                              треба натиснути <LineBreak/>кнопку у перші хвилини уроку.<LineBreak/>
 Наприклад: перший урок та треба  натиснути у проміжку 7:55-8:10.<LineBreak/>
 А потім усі уроки будуть приєднатися автоматично.<LineBreak/>
-Є якесь питання? telegram: @skeden</TextBlock>
-                        
+                            Є якесь питання? Підтримка нижче.
+
+
+                        </TextBlock>
+
+
+                        <TextBlock TextWrapping="Wrap" Name="SupportButton" Style="{StaticResource bText}" VerticalAlignment ="Bottom" HorizontalAlignment="Stretch" Margin="0 40 0 5"/>
+                        <Button Width="105" Height="40" Style="{StaticResource Button1}" VerticalAlignment ="Bottom" Background="Transparent"  Name="Support" Click="Support_Click" Margin="0 -4 0 -135" Content="Підтримка"/>
+
                         <TextBlock TextWrapping="Wrap" Name="CloseButton1" Style="{StaticResource bText}" VerticalAlignment ="Bottom" HorizontalAlignment="Stretch" Margin="0 40 0 5"/>
-                        <Button Width="155" Height="50" Style="{StaticResource Button1}" VerticalAlignment ="Bottom" Background="Transparent"  Name="Close12" Click="Close12_Click_1"  Margin="0 -4 0 -275" Content="Закрити"/>
+                        <Button Width="155" Height="50" Style="{StaticResource Button1}" VerticalAlignment ="Bottom" Background="Transparent"  Name="Close12" Click="Close12_Click"  Margin="0 -4 0 -275" Content="Закрити"/>
                     </Grid>
                 </TabItem>
 
             </TabControl>
         </Border>
     </Grid>
-    
+
 </Window>
     

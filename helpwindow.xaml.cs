@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,11 +30,37 @@ namespace Zoomjoiner
                 
             }
 
+            void Border_MouseDown12(object sender, MouseButtonEventArgs e)
+            {
+                if (e.ButtonState == MouseButtonState.Pressed)
+                    DragMove();
+            }
+
+
+
+
 
         }
         void Close12_Click_1(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Close12_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Support_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://t.me/skeden");
+        }
+
+        private void Border_MouseDown12(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ButtonState == MouseButtonState.Pressed)
+                DragMove();
+
         }
     }
 }
