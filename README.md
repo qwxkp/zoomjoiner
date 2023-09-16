@@ -4,4 +4,4 @@ I hope you enjoy. love you all
 
 https://qwxkp.github.io/zoomjoiner
 
-https://media.discordapp.net/attachments/1132796790706552863/1152571546846646352/zoomjoiner.png
+
